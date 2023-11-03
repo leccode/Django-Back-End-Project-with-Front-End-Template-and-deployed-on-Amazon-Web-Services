@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>
+<html>
+<body>
+
+{% include "mymenu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
+
+<title>Test Mode</title>
+
+<p><a href="/">HOME</a></p>
+
+<p>Here, testing takes place to produce new methodologies</p>
+
+<ul>
+    {% for x in mymembers %}
+    <h1>{{ x.id }}</h1>
+    <p>
+        {{ x.firstname }}
+        {{ x.lastname }}
+    </p>
+    {% endfor %}
+</ul>
+
+<p>In views.py you can see how to import and fetch members from the database.</p>
+
+</body>
+
+{% include 'footer.html' %} 
+
+</html>-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
+<body>
+
+{% for x in mymembers %}
+  <h1>{{ x }}</h1>
+{% endfor %}
+
+<p>In myglobal.css you can see what the stylesheet looks like.</p>
+
+</body>
+</html>
